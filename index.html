@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表格自由复制</title>
+    <style>
+        html, body, div, table, tr, th ,td { padding: 0; margin: 0; }
+        .tb {
+            border-collapse: collapse;
+        }
+        .tb th, .tb td {
+            padding: 4px 12px;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <table border="1" class="tb">
+        <thead>
+            <tr>
+                <th>序号</th>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>年龄</th>
+                <th>户籍</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>小明</td>
+                <td>男</td>
+                <td>16</td>
+                <td>广东佛山</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>小萌</td>
+                <td>男</td>
+                <td>17</td>
+                <td>广东珠海</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>小红</td>
+                <td>女</td>
+                <td>19</td>
+                <td>内蒙古</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>小蓝</td>
+                <td>男</td>
+                <td>12</td>
+                <td>西安</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>小草</td>
+                <td>女</td>
+                <td>20</td>
+                <td>贵阳</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="./tableselect.js"></script>
+    <script>
+        ;(function () {
+            // 实例化
+            new TableSelect('.tb')
+        })()
+    </script>
+</body>
+</html>
